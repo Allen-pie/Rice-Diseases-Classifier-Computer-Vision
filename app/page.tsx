@@ -20,6 +20,9 @@ import { FocusCard } from "@/components/ui/focus-cards";
 import { CheckCircle2 } from "lucide-react";
 
 export default function Page() {
+
+  const LINK_BE = "be-compvis-production.up.railway.app/predict";
+
   const uploaderRef = useRef<ImageUploaderAiHandle>(null);
   const [isAnalyzing, setIsAnalyzing] = useState<boolean>(false);
 
@@ -62,6 +65,23 @@ export default function Page() {
   const [classify, setClassify] = useState<null | true>(null);
   const [hovered, setHovered] = useState<number | null>(null);
 
+  const [result, setResult] = useState<any>(null);
+
+  const sendToBackEnd = async (file:any) => {
+    const formData = new FormData()
+    formData.append("file", file)
+
+    const res = await fetch(LINK_BE, {
+      method: "POST",
+      body: formData,
+      mode: "cors"
+    })
+
+    const data = await res.json()
+
+    return data;
+  }
+
   return (
     <main>
       <LpNavbar1 />
@@ -76,7 +96,7 @@ export default function Page() {
               Healthy, Bacterial Leaf Blight, Leaf Blast, and Brownspot.
             </p>
           </h3>
-    
+
           <div className="relative w-full overflow-hidden mask-[linear-gradient(to_right,transparent_0%,black_12.5%,black_87.5%,transparent_100%)]">
             <div className="animate-infinite-scroll flex w-max items-center gap-x-10">
               {cards.map((item, index) => {
@@ -100,11 +120,20 @@ export default function Page() {
         <div className="">
           <ImageUploaderAi
             isAnalyzing={isAnalyzing}
-            onProcess={() => {
+            onProcess={async (file) => {
+              setIsAnalyzing(true);
+
+              const resultBE = await sendToBackEnd(file.content);
+              
+              setResult(resultBE)
               setClassify(true);
+
+              setIsAnalyzing(false)
+
             }}
             onUpload={() => {
               // setIsAnalyzing(true);
+
             }}
             ref={uploaderRef}
           />
@@ -122,29 +151,27 @@ export default function Page() {
                   <CardContent className="">
                     <div className="space-y-4">
                       <h1 className="font-bold text-4xl">
-                        Rice Blast (Magnaporthe oryzae)
+                        {result.prediction}
                       </h1>
 
                       <h2 className="text-2xl">Symptoms:</h2>
 
                       <p>
-                        Spindle-shaped lesions with gray centers and brown
-                        margins on leaves; neck rot at panicle stage causes
-                        empty grains.
+                        {result.ai_analysis.symptoms}
                       </p>
 
                       <h2 className="text-2xl">Favorable Conditions:</h2>
 
-                      <p>Warm, humid weather; excess nitrogen.</p>
+                      <p>{result.ai_analysis.favorable_conditions}</p>
 
                       <h2 className="text-2xl">Management:</h2>
                       <ul className="">
-                        <li>Use resistant varieties like Super Basmati.</li>
-                        <li>Avoid excessive urea application.</li>
+                        <li>{result.ai_analysis.management}</li>
+                        {/* <li>Avoid excessive urea application.</li>
                         <li>
                           Spray Tricyclazole 75% WP (6 g/10 L water) at early
                           signs.
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                   </CardContent>

@@ -28,11 +28,12 @@ export function FaqSection2() {
             </h1>
             {/* Section Description */}
             <p className="text-muted-foreground">
-              Learn more about our rice leaf disease classification system and how it can help you identify and manage rice plant diseases. Can&apos;t find what you&apos;re
+              Learn more about our rice leaf disease classification system and how it can help you identify and manage rice plant diseases. 
+              {/* Can&apos;t find what you&apos;re
               looking for?{" "}
               <Link href="#" className="text-primary underline">
                 Contact us.
-              </Link>
+              </Link> */}
             </p>
           </div>
 

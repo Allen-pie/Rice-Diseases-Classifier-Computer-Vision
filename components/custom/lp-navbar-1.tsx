@@ -5,10 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import { on } from "events";
 
 const MENU_ITEMS = [
   { label: "Home", href: "/" },
-  { label: "How it works", href: "#how-it-works" }
+  { label: "How it works", href: "#how-it-works" },
+  { label: "FAQ", href: "#faq" },
 ] as const;
 
 interface NavMenuItemsProps {
@@ -19,7 +21,7 @@ const NavMenuItems = ({ className }: NavMenuItemsProps) => (
   <div className={`flex flex-col gap-1 md:flex-row ${className ?? ""}`}>
     {MENU_ITEMS.map(({ label, href }) => (
       <Link key={label} href={href}>
-        <Button variant="ghost" className="w-full md:w-auto">
+        <Button variant="ghost" className="w-full md:w-auto" >
           {label}
         </Button>
       </Link>
@@ -52,18 +54,18 @@ export function LpNavbar1() {
         {/* Desktop Navigation */}
         <div className="hidden w-full flex-row justify-center gap-5 md:flex">
           <NavMenuItems />
-          <Link href="/login">
+          {/* <Link href="/login">
             <Button>Login</Button>
-          </Link>
+          </Link> */}
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="flex w-full flex-col justify-end gap-5 pb-2.5 md:hidden">
             <NavMenuItems />
-            <Link href="#pricing">
+            {/* <Link href="#pricing">
               <Button className="w-full">Try for free</Button>
-            </Link>
+            </Link> */}
           </div>
         )}
       </div>

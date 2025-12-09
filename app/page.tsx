@@ -21,7 +21,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function Page() {
 
-  const LINK_BE = "be-compvis-production.up.railway.app/predict";
+  const LINK_BE = "https://be-compvis-production.up.railway.app/predict";
 
   const uploaderRef = useRef<ImageUploaderAiHandle>(null);
   const [isAnalyzing, setIsAnalyzing] = useState<boolean>(false);

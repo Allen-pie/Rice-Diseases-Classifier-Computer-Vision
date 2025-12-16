@@ -1,23 +1,16 @@
 "use client";
-import { BentoGrid6 } from "@/components/custom/bento-grid-6";
 import { FaqSection2 } from "@/components/custom/faq-section-2";
 import { FeatureSection9 } from "@/components/custom/feature-section-9";
 import { Footer1 } from "@/components/custom/footer-1";
-import { HeroSection2 } from "@/components/custom/hero-section-2";
 import { CardHeader, CardTitle, CardContent, Card } from "@/components/ui/card";
 import {
   ImageUploaderAi,
   ImageUploaderAiHandle,
 } from "@/components/custom/image-uploader.ai";
-import { LogoSection10 } from "@/components/custom/logo-section-7";
 import { LpNavbar1 } from "@/components/custom/lp-navbar-1";
-import { PricingSection3 } from "@/components/custom/pricing-section-3";
-import { StatsSection4 } from "@/components/custom/stats-section-4";
-import TestimonialsSection1 from "@/components/custom/testimonials-section-1";
 import { Button } from "@/components/ui/button";
 import { useRef, useState } from "react";
 import { FocusCard } from "@/components/ui/focus-cards";
-import { CheckCircle2 } from "lucide-react";
 
 export default function Page() {
   const LINK_BE = "https://be-compvis-production.up.railway.app/predict";

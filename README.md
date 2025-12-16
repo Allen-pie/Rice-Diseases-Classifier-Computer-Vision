@@ -1,5 +1,6 @@
 
 # Rice Plant Diseases Classification
+<p align="center">
   <img src="https://github.com/user-attachments/assets/8afa2594-c44b-4331-9855-bd5d45901882" alt="DL-DEMO-GIF"/>
 </p>
 
@@ -106,9 +107,9 @@ The trained model is integrated into a web-based application designed to be simp
 
 ## Demo
 **Upload Image**
-<p align="center">
+<!-- <p align="center">
   <img src="https://github.com/user-attachments/assets/f5ab8803-1511-4789-85a4-979b936ee654" alt="DL-DEMO-GIF"/>
-</p>
+</p> -->
 
 ## Authors
 

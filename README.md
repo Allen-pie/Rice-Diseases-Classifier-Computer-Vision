@@ -2,7 +2,7 @@
 # Rice Plant Diseases Classification
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/8adcf630-ff65-4099-baed-5b623809831c alt="Hero gif"/>
+    ![gif read](https://github.com/user-attachments/assets/8afa2594-c44b-4331-9855-bd5d45901882)
 </p>
 
 This repository presents a Rice Plant Diseases Classifier that utilizes **computer vision** feature extraction techniques combined with a fully connected **Artificial Neural Network (ANN)** for classification.

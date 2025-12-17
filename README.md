@@ -35,7 +35,7 @@ All extracted features were stacked into a single feature vector and classified 
 
 **📊 Result**
 
-[![classification report](https://github.com/user-attachments/assets/80666b4d-e912-41b7-875f-00f62b089bc7)
+![classification report](https://github.com/user-attachments/assets/80666b4d-e912-41b7-875f-00f62b089bc7)
 
 
 **Experiment 2**
@@ -98,11 +98,13 @@ The trained model is integrated into a web-based application designed to be simp
 
 
 ## Screenshots
-<!-- <p align="center">
-  <img width="1900" height="908" alt="Screenshot 2025-12-12 234950" src="https://github.com/user-attachments/assets/44632d50-9580-4ce8-b4c9-ad93a5bf9a46" />
-    <img width="1899" height="911" alt="Screenshot 2025-12-12 234920" src="https://github.com/user-attachments/assets/a90c0bcc-6b90-4332-84ef-8d107bfa44d2" />
-<img width="1871" height="890" alt="Screenshot 2025-12-14 215951" src="https://github.com/user-attachments/assets/7cb315f5-9fdf-474a-8e9e-fca104dee2f1" />
-</p> -->
+<p align="center">
+  <img width="1895" height="943" alt="Screenshot 2025-12-17 230524" src="https://github.com/user-attachments/assets/93e90adb-df73-4126-9971-fc56ab93845f" />
+  <img width="1897" height="720" alt="Screenshot 2025-12-17 230458" src="https://github.com/user-attachments/assets/14b0ce2c-96f5-4c6e-8ef6-2870afe5feac" />
+<img width="1897" height="686" alt="Screenshot 2025-12-17 230216" src="https://github.com/user-attachments/assets/65af8dd9-058c-4c76-bfc3-4b0eaa2b6a08" />
+<img width="1891" height="969" alt="Screenshot 2025-12-17 230331" src="https://github.com/user-attachments/assets/7f331f29-8889-45b0-af91-86760042b7c1" />
+
+</p> 
 
 
 ## Demo

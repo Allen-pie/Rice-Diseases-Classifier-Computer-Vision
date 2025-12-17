@@ -89,7 +89,7 @@ The trained model is integrated into a web-based application designed to be simp
 
 
 ## How to Use    
-**1. Upload Image**
+**Upload Image**
 
     1. Click to upload the leaf of rice plant image
     2. Click "Analyze"
@@ -105,10 +105,10 @@ The trained model is integrated into a web-based application designed to be simp
 <img width="1891" height="969" alt="Screenshot 2025-12-17 230331" src="https://github.com/user-attachments/assets/7f331f29-8889-45b0-af91-86760042b7c1" />
 
 </p> 
-![COMPVIS-DEMO-Trim-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/f2c4241c-b8ae-470b-afee-dec62f0585cc)
+
 ## Demo
 <p align="center">
-  
+  ![COMPVIS-DEMO-Trim-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/f2c4241c-b8ae-470b-afee-dec62f0585cc)
 </p> 
 
 ## Authors

@@ -11,6 +11,7 @@ import { LpNavbar1 } from "@/components/custom/lp-navbar-1";
 import { Button } from "@/components/ui/button";
 import { useRef, useState } from "react";
 import { FocusCard } from "@/components/ui/focus-cards";
+import { FileInfo } from "@/types/global";
 
 export default function Page() {
   const LINK_BE = "http://127.0.0.1:5000/predict";
@@ -72,6 +73,18 @@ export default function Page() {
     return data;
   };
 
+  const classifyFunc = async (file: FileInfo) => {
+    try {
+      setIsAnalyzing(true);
+      const resultBE = await sendToBackEnd(file.content);
+      setResult(resultBE);
+      setClassify(true);
+    } catch (error) {
+      alert(error);
+    } finally {
+      setIsAnalyzing(false);
+    }
+  };
 
   return (
     <main>
@@ -114,16 +127,7 @@ export default function Page() {
           <div className="">
             <ImageUploaderAi
               isAnalyzing={isAnalyzing}
-              onProcess={async (file) => {
-                setIsAnalyzing(true);
-
-                const resultBE = await sendToBackEnd(file.content);
-
-                setResult(resultBE);
-                setClassify(true);
-
-                setIsAnalyzing(false);
-              }}
+              onProcess={classifyFunc}
               onUpload={() => {
                 // setIsAnalyzing(true);
               }}
@@ -183,7 +187,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <FeatureSection9  />
+      <FeatureSection9 />
       <FaqSection2 />
       <Footer1 />
     </main>

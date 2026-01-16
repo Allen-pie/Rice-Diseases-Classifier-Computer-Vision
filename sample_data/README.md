@@ -2,11 +2,21 @@
 
 Original Dataset Sources:
 
-**Kaggle [Healthy, Hispa, Brown Spot, Leaf Blast]**
+**Kaggle 1**
 
 - https://www.kaggle.com/datasets/minhhuy2810/rice-diseases-image-dataset/data
 
-**Mendeley Data [Brown Spot, Bacterial Leaf Blight, Leaf Smut (insert to leaf blast)]**
+
+**Kaggle 2**
+
+- https://www.kaggle.com/datasets/dedeikhsandwisaputra/rice-leafs-disease-dataset
+
+**UC Irvine**
+
+- https://archive.ics.uci.edu/dataset/486/rice+leaf+diseases
+
+
+**Mendeley Data**
 
 - https://data.mendeley.com/datasets/dwtn3c6w6p/1
 

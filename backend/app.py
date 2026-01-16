@@ -20,8 +20,8 @@ CORS(app)
 
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-model_path = os.path.join("./output/model/experiment_1/model.keras")
-scaler_path = os.path.join("./output/model/experiment_1/scaler.save")
+model_path = os.path.join("../output/model/experiment_1/model_3h.keras")
+scaler_path = os.path.join("../output/model/experiment_1/scaler_3h.pkl")
 
 model = None
 scaler = None
@@ -91,9 +91,9 @@ def pre_process(image_file):
     fv_hu = fd_hu_moments(img)
     fv_haralick = fd_haralick(img)
     fv_hist = fd_histogram(img, bins=bins)
-    fv_glcm = fd_glcm(img) 
-
-    global_features = np.hstack([fv_hist, fv_haralick, fv_hu, fv_glcm])
+    # fv_glcm = fd_glcm(img) 
+    # global_features = np.hstack([fv_hist, fv_haralick, fv_hu, fv_glcm])
+    global_features = np.hstack([fv_hist, fv_haralick, fv_hu])
     global_features = global_features.reshape(1, -1)
 
     scaler = get_scaler()

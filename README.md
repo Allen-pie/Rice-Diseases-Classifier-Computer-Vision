@@ -28,7 +28,8 @@ Feature extraction techniques used:
 - **Texture Features: Haralick Features**
 
 **📊 Result**
-<img width="578" height="261" alt="3h-cr" src="https://github.com/user-attachments/assets/295e2331-7186-4424-9558-734680e8f26a" />
+
+<img width="468" height="157" alt="3h-cr" src="https://github.com/user-attachments/assets/295e2331-7186-4424-9558-734680e8f26a" />
 
 
 **Experiment 2**
@@ -41,7 +42,8 @@ Feature extraction techniques used:
 
 
 **📊 Result**
-<img width="568" height="257" alt="3h-glcm-cr" src="https://github.com/user-attachments/assets/41e98ed0-9b0d-46ec-8380-a5b441f55794" />
+
+<img width="468" height="157" alt="3h-glcm-cr" src="https://github.com/user-attachments/assets/41e98ed0-9b0d-46ec-8380-a5b441f55794" />
 
 
 **Experiment 3**
@@ -54,7 +56,7 @@ Feature extraction techniques used:
 
 **📊 Result**
 
-![classification report](https://github.com/user-attachments/assets/fbbba170-bddf-4287-9686-2032c6bc2abf)
+<img width="468" height="157" alt="bovw-cr" src="https://github.com/user-attachments/assets/cb37e3cd-8995-4bbc-b3c6-499f238f20ec" />
 
 
 

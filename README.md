@@ -12,16 +12,13 @@ The main objective of this project is to evaluate the effectiveness of different
 ## Experiments
 
 **ANN Classifier Architecture**
-```
-model.add(Dense(512, activation='relu', input_shape=(input_dim,)))
-model.add(Dropout(0.3))
-model.add(Dense(256, activation='relu'))
-model.add(Dropout(0.3))
-model.add(Dense(128, activation='relu'))
-model.add(Dense(num_classes, activation='softmax'))
-```
+<p align="center">
+  <img width="817" height="65" alt="classifier layer" src="https://github.com/user-attachments/assets/f43b1f44-34a2-43ae-a5d0-a32e06dcf3d2" />
+</p>
 
-Two main experimental setups were conducted:
+
+The resulting feature vectors were classified using the same defined architecture.
+Three main experimental setups were conducted:
 
 **Experiment 1**
 
@@ -29,23 +26,31 @@ Feature extraction techniques used:
 - **Color Features: HSV Histogram**
 - **Shape Features: Hu Moments**
 - **Texture Features: Haralick Features**
-- **Spatial Texture Features:Gray Level Co-occurrence Matrix (GLCM)** 
-
-All extracted features were stacked into a single feature vector and classified using the defined architecture.
 
 **📊 Result**
-
-![classification report](https://github.com/user-attachments/assets/80666b4d-e912-41b7-875f-00f62b089bc7)
+<img width="578" height="261" alt="3h-cr" src="https://github.com/user-attachments/assets/295e2331-7186-4424-9558-734680e8f26a" />
 
 
 **Experiment 2**
+
+Feature extraction techniques used:
+- **Color Features: HSV Histogram**
+- **Shape Features: Hu Moments**
+- **Texture Features: Haralick Features**
+- **Spatial Texture Features:Gray Level Co-occurrence Matrix (GLCM)** 
+
+
+**📊 Result**
+<img width="568" height="257" alt="3h-glcm-cr" src="https://github.com/user-attachments/assets/41e98ed0-9b0d-46ec-8380-a5b441f55794" />
+
+
+**Experiment 3**
 
 Feature extraction techniques used:
 
 - **ORB (Oriented FAST and Rotated BRIEF)**
 - **Bag of Visual Words (BoVW)**
 
-The resulting feature vectors were classified using the same defined architecture.
 
 **📊 Result**
 
@@ -54,38 +59,36 @@ The resulting feature vectors were classified using the same defined architectur
 
 
 ## Conclusion
-Based on the experimental results, **Experiment 1** outperformed the **ORB** + **BoVW** approach.
+Based on the experimental results, **Experiment 1** performance came on top.
 
 
 ## Dataset
-The dataset used in this project was collected from multiple public sources:
+Original Dataset Sources:
 
-**Kaggle Dataset**
+**Kaggle 1**
 
-Classes: Healthy, Hispa, Brown Spot, Leaf Blast
+- https://www.kaggle.com/datasets/minhhuy2810/rice-diseases-image-dataset/data
 
-Source:
-https://www.kaggle.com/datasets/minhhuy2810/rice-diseases-image-dataset/data
+
+**Kaggle 2**
+
+- https://www.kaggle.com/datasets/dedeikhsandwisaputra/rice-leafs-disease-dataset
+
+**UC Irvine**
+
+- https://archive.ics.uci.edu/dataset/486/rice+leaf+diseases
+
 
 **Mendeley Data**
 
-Classes: Brown Spot, Bacterial Leaf Blight, Leaf Smut
+- https://data.mendeley.com/datasets/dwtn3c6w6p/1
 
-Source:
-https://data.mendeley.com/datasets/dwtn3c6w6p/1
-
-**Final Selected Classes:**
-
-- Healthy
-- Brown Spot
-- Bacterial Leaf Blight
-- Leaf Blast (Leaf Smut merged into Leaf Blast)
-
+Final classes that are chosen: 
+**Healthy, Brownspot, Bacterial Leaf Blight & Leaf Blast**
 
 
 # Application
 The trained model is integrated into a web-based application designed to be simple and user-friendly.
-
 
 
 ## How to Use    
